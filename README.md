@@ -46,6 +46,7 @@ You can test all API endpoints using the Postman collection available in this re
 
 ## Installation & Setup
 
+```
 # 1. Clone the repository
 git clone https://github.com/yourusername/ticket-management-system.git
 
@@ -60,6 +61,7 @@ npm install
 # 5. Run the server
 npm run dev
 
+```
 
 ---
 
@@ -99,6 +101,7 @@ npm run dev
 | POST   | `/tickets/purchase`    | Purchase a ticket (with txn ID)     |
 
 
+```
 ### Project Structure
 
 TICKET MANAGEMENT/
