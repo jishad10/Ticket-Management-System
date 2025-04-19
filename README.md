@@ -43,6 +43,7 @@ You can test all API endpoints using the Postman collection available in this re
 
 🔗 [Download Postman Collection](https://github.com/jishad10/Ticket-Management-System/tree/main/Ticket%20Management/public/postman%20collection)
 
+---
 
 ## Installation & Setup
 
@@ -101,9 +102,11 @@ npm run dev
 | POST   | `/tickets/purchase`    | Purchase a ticket (with txn ID)     |
 
 
-```
+----
+
 ### Project Structure
 
+```
 TICKET MANAGEMENT/
 ├── node_modules/                # Project dependencies
 ├── public/                      # Public assets
