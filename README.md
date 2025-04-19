@@ -44,9 +44,8 @@ You can test all API endpoints using the Postman collection available in this re
 🔗 [Download Postman Collection](https://github.com/jishad10/Ticket-Management-System/tree/main/Ticket%20Management/public/postman%20collection)
 
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
-```bash
 # 1. Clone the repository
 git clone https://github.com/yourusername/ticket-management-system.git
 
@@ -60,6 +59,7 @@ npm install
 
 # 5. Run the server
 npm run dev
+
 
 ---
 
