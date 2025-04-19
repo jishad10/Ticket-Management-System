@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "266a079b-e9d5-435e-9aa1-115755479636",
+		"name": "Ticket Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38129534"
+	},
+	"item": [
+		{
+			"name": "Bus",
+			"item": [
+				{
+					"name": "Create Bus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"busNumber\": \"BUS-007\",\r\n  \"operatorName\": \"Greenaaasss\",\r\n  \"origin\": \"Dhaka\",\r\n  \"destination\": \"Chittagong\",\r\n  \"schedule\": [\r\n    {\r\n      \"date\": \"2025-04-23\",\r\n      \"departureTime\": \"08:00 AM\",\r\n      \"availableSeats\": 40\r\n    }\r\n  ],\r\n  \"totalSeats\": 40,\r\n  \"pricePerSeat\": 500\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/admin/bus"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Bus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"destination\": \"Cox's Bazars\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/admin/bus/6803c4c94646a20b86d9fc46"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bus",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/admin/bus/6802ab8cdaae9f4969e63cfd"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/buses"
+					},
+					"response": []
+				},
+				{
+					"name": "Get bus by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/bus/6802cf57a5bbbc346a80a626"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "Create Ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"user\": \"68028a326220e70fe70478bd\",\r\n  \"bus\": \"6802abbbdaae9f4969e63d01\",\r\n  \"scheduleDate\": \"2025-04-21\",\r\n  \"departureTime\": \"08:00 AM\",\r\n  \"seatNumber\": 5,\r\n  \"price\": 500,\r\n  \"paymentStatus\": \"completed\",\r\n  \"transactionId\": \"txn_1234567890\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/admin/ticket"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ticket",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ticket",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/admin/ticket/6803dc4a6d1182237c586bda"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All ticket",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/v1/tickets"
+					},
+					"response": []
+				},
+				{
+					"name": "purchase",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ticketId\": \"6803c6d8a7bd25f0e03db448\",\r\n  \"busId\": \"6803c4c94646a20b86d9fc46\",\r\n  \"transactionId\": \"TXN123456789\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/v1/tickets/purchase"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
